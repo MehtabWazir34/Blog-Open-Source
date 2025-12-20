@@ -199,7 +199,7 @@ const updateProfilePic = async (req, res) => {
   }
 };
 
-export const searchUsers = async (req, res) => {
+const searchUsers = async (req, res) => {
   try {
     const { q } = req.query;
 
@@ -232,7 +232,6 @@ const getUserById = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // User stats
     const blogs = await Blog.find({ author: id });
 
     const blogCount = blogs.length;
@@ -259,4 +258,4 @@ const getUserById = async (req, res) => {
 };
 
 
-export { login, logout, signup, updateProfile, updateProfilePic, profile, getUserById}
+export { login, logout, signup, updateProfile, updateProfilePic, profile, getUserById, searchUsers}

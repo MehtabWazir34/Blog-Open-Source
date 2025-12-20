@@ -2,7 +2,6 @@ import { Router } from "express";
 import { login, signup,profile,logout,  updateProfile, updateProfilePic, getUserById, searchUsers } from "../controller/user.controller.js";
 import upload from "../config/multerConfig.js";
 import authCheck from "../middlewares/authCheck.js";
-// import SearchUser from "../../frontend/src/components/SearchUser.jsx";
 
 const userRouter = Router()
 
